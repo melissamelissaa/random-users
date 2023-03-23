@@ -4,7 +4,6 @@ btn.addEventListener("click", () => {
   fetch(`https://randomuser.me/api?results=${Math.floor(Math.random() * 10)}`)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       container.innerHTML = "";
       for (let i = 0; i < data.results.length; i++) {
         renderUserCard(data.results[i]);
@@ -95,12 +94,12 @@ function renderMoreDetails(
     title: "<strong>More <u>details</u></strong>",
     icon: "info",
     html:
-    `<p class="details-container-p">age: ${age}</p>
-    <p class="details-container-p">gender: ${gender}</p>
-    <p class="details-container-p">street name: ${streetName}</p>
-    <p class="details-container-p">street number: ${streetNumber}</p>
-    <p class="details-container-p">nationality: ${nat}</p>
-    <p class="details-container-p">country: ${country}</p>
+    `<p class="details-container-p">Age: ${age}</p>
+    <p class="details-container-p">Gender: ${gender}</p>
+    <p class="details-container-p">Street name: ${streetName}</p>
+    <p class="details-container-p">Street number: ${streetNumber}</p>
+    <p class="details-container-p">Nationality: ${nat}</p>
+    <p class="details-container-p">Country: ${country}</p>
     <p class="details-container-p">ID: ${idValue}</p>` ,
     showCloseButton: true,
     showCancelButton: false,
